@@ -42,7 +42,7 @@ define( 'DB_CHARSET', 'utf8mb4' );
 /** The Database Collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
 
-$SiteUrl = 'http' . (($_SERVER['SERVER_NAME'] != "yoga.com")? 's' : '') . '://' . $_SERVER['SERVER_NAME'];
+$SiteUrl = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['SERVER_NAME'];
 define( 'WP_HOME', $SiteUrl);
 define( 'WP_SITEURL', $SiteUrl);
 
