@@ -1,4 +1,9 @@
 <?php
+if(file_exists(__DIR__ . "/.env")){
+	require(__DIR__ . '/vendor/autoload.php');
+	$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+	$dotenv->load();
+}
 /**
  * The base configuration for WordPress
  *
@@ -20,16 +25,16 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'yoga' );
+define( 'DB_NAME', $_SERVER['DB_NAME']);
 
 /** MySQL database username */
-define( 'DB_USER', 'yoga' );
+define( 'DB_USER', $_SERVER['DB_USER']);
 
 /** MySQL database password */
-define( 'DB_PASSWORD', '3Fi7e2tvYt9jVRSh' );
+define( 'DB_PASSWORD', $_SERVER['DB_PASSWORD']);
 
 /** MySQL hostname */
-define( 'DB_HOST', 'localhost' );
+define( 'DB_HOST', $_SERVER['DB_HOST']);
 
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8mb4' );

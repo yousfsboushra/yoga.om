@@ -1,0 +1,12 @@
+{
+    "name": "mailbird/yoga.om",
+    "authors": [
+        {
+            "name": "Yousef Samir",
+            "email": "yousefsboushra@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.1"
+    }
+}
