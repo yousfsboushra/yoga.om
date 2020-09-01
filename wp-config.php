@@ -42,12 +42,6 @@ define( 'DB_CHARSET', 'utf8mb4' );
 /** The Database Collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
 
-define( 'AS3CF_SETTINGS', serialize( array(
-    'provider' => 'aws',
-    'access-key-id' => $_SERVER['FELIX_AWS_ACCESS_KEY_ID'],
-    'secret-access-key' => $_SERVER['FELIX_AWS_SECRET_ACCESS_KEY'],
-) ) );
-
 define( 'WP_HOME', $SiteUrl);
 define( 'WP_SITEURL', $SiteUrl);
 
