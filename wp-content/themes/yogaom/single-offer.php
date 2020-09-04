@@ -4,7 +4,7 @@ global $post;
 $acf_fields = get_fields($post, 0);
 ?>
 <main id="site-content" class="container-fluid" role="main">
-    INDEX
+    <h1>Offer</h1>
 </main>
 
 <?php

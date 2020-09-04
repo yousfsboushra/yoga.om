@@ -37,7 +37,22 @@ function yogaom_site_logo( $args = array(), $echo = true ) {
 	$args = wp_parse_args( $args, $defaults );
 
 	$logo  = '<img src="' . $args['logo'] . '" class="' . $args['logo_class'] . '" title="' . $args['title'] . '" alt="' . $args['title'] . '" />';
-	$html = '<a href="">' . $logo . '</a>';
+	$html = '<a href="/">' . $logo . '</a>';
 
 	return $html;
 }
+
+function  yogaom_site_disable_canonical_front_page( $redirect ) {
+    if ( is_page() && $front_page = get_option( 'page_on_front' ) ) {
+        if ( is_page( $front_page ) )
+            $redirect = false;
+    }
+    return $redirect;
+}
+
+add_filter( 'redirect_canonical', 'yogaom_site_disable_canonical_front_page' );
+
+function  yogaom_site_post_thumbnails() {
+    add_theme_support( 'post-thumbnails' );
+}
+add_action( 'after_setup_theme', 'yogaom_site_post_thumbnails' );

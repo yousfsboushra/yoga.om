@@ -16,7 +16,7 @@ body{
     margin-right: 3rem;
     list-style: none;
 }
-.navigation-menu .menu-item a{
+a, a:hover, a:visited{
     color:inherit;
 }
 .footer{
@@ -30,7 +30,9 @@ body{
 }
 .home-intro{
     padding-top: 8rem; /*128*/
-    background: url("imgs/intro.jpg") no-repeat center center transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: transparent;
     background-size: cover;
     z-index: 1;
     position: relative;
@@ -155,7 +157,7 @@ body{
     text-align: center;
 }
 .yoga-class{
-    width: 18.5rem; /*270*/
+    width: 18.6rem; /*270*/
 }
 .class-image{
     overflow: hidden;
@@ -166,4 +168,5 @@ body{
 }
 .class-text{
     border-bottom: solid 2px #ac9cb4;
+    overflow-wrap: break-word;
 }

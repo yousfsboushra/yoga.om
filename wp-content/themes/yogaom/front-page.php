@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <?php
-$post = get_post_object_by_slug_and_post_type('home', 'page');
+global $post;
 $acf_fields = get_fields($post, 0);
 ?>
 <main id="site-content" class="container-fluid" role="main">
