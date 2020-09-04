@@ -179,6 +179,31 @@ function yoga_classes_post_class() {
                     'max' => '',
                     'step' => 1,
                 ),
+                array(
+                    'key' => 'field_5f5202f8677e0',
+                    'label' => 'Offer',
+                    'name' => 'offer',
+                    'type' => 'relationship',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => array(
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ),
+                    'post_type' => array(
+                        0 => 'offer',
+                    ),
+                    'taxonomy' => '',
+                    'filters' => array(
+                        0 => 'search',
+                    ),
+                    'elements' => '',
+                    'min' => '',
+                    'max' => '',
+                    'return_format' => 'object',
+                ),
             ),
             'location' => array(
                 array(

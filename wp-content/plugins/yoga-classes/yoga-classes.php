@@ -8,6 +8,7 @@ Author: Yousef Samir
 
 include 'post-types/yoga-class.php';
 include 'post-types/offer.php';
+include 'post-types/home.php';
 
 
 
