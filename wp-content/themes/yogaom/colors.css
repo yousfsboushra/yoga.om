@@ -1,0 +1,29 @@
+.bg-transparent{
+    background-color: transparents;
+}
+.bg-gray{
+    background-color: rgba(203, 210, 210, 0.57);
+}
+.bg-gray-light{
+    background-color: #ebf2f2;
+    }
+.bg-gray-lighter{
+    background-color: rgba(213, 220, 220, 1);
+}
+.bg-white{
+    background-color: #ffffff;
+}
+.bg-purple{
+    background-color: #745a82;
+}
+.bg-purple-light{
+    background: #9778a7;
+}
+
+
+.font-purple{
+    color: #745a82;
+}
+.font-white{
+    color: #ffffff;
+}

@@ -3,7 +3,9 @@
 function yogaom_theme_assets() {
 	wp_enqueue_style( 'bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' );
 	wp_enqueue_style( 'fonts', get_template_directory_uri() . '/fonts.css' );
+	wp_enqueue_style( 'color', get_template_directory_uri() . '/colors.css' );
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
+	wp_enqueue_style( 'media-queries', get_template_directory_uri() . '/media.css' );
 }
  
 add_action( 'wp_enqueue_scripts', 'yogaom_theme_assets' );

@@ -35,6 +35,25 @@ function yoga_classes_post_class() {
             'title' => 'Yoga Class',
             'fields' => array(
                 array(
+                    'key' => 'field_5f51543950dyn',
+                    'label' => 'Dynamics',
+                    'name' => 'dynamics_label',
+                    'type' => 'text',
+                    'instructions' => '',
+                    'required' => 1,
+                    'conditional_logic' => 0,
+                    'wrapper' => array(
+                      'width' => '',
+                      'class' => '',
+                      'id' => '',
+                    ),
+                    'default_value' => '',
+                    'placeholder' => '',
+                    'prepend' => '',
+                    'append' => '',
+                    'maxlength' => 10,
+                ),
+                array(
                     'key' => 'field_5f4e9fbbbeda4',
                     'label' => 'Start Date',
                     'name' => 'start_date',

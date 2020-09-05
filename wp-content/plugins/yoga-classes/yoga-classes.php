@@ -9,17 +9,19 @@ Author: Yousef Samir
 include 'post-types/yoga-class.php';
 include 'post-types/offer.php';
 include 'post-types/home.php';
+include 'post-types/classes.php';
 
 
 
-function yoga_classes_get_number_of_posts_of_type_in_chunks($number_of_posts = 3, $post_type, $chunk_size){
-    $args = array(
+function yoga_classes_get_number_of_posts_of_type_with_args_in_chunks($number_of_posts = 3, $post_type, $args, $chunk_size){
+    $default_args = array(
         'post_type' => $post_type,
         'post_status' => 'publish',
         'posts_per_page' => $number_of_posts, 
         'orderby' => 'id', 
         'order' => 'ASC'
     );
+    $args = wp_parse_args( $args, $default_args );
 
     $the_query = new WP_Query( $args ); 
         
@@ -45,7 +47,6 @@ function get_post_object_by_slug_and_post_type($the_slug, $post_type){
         'numberposts' => 1
     );
     $posts = get_posts($args);
-    print_r($posts);
     if( $posts ){
         return $posts[0];
     }
