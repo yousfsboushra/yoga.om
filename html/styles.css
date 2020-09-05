@@ -3,13 +3,22 @@ html{
 }
 body{
     font-size: 1rem;
-    color: #745a82;
-    background-color: #fff;
+}
+.uppercase{
+    text-transform: uppercase;
 }
 .header{
     background: url("imgs/header-bg.png") repeat-x 0 0 transparent;
     height: 8rem; /*128*/
-    z-index: 2;
+    z-index: 10;
+}
+.navigation-menu .menu-item{
+    float: left;
+    margin-right: 3rem;
+    list-style: none;
+}
+a, a:hover, a:visited{
+    color:inherit;
 }
 .footer{
     background: url("imgs/footer-bg.png") repeat-x 0 0 transparent;
@@ -20,12 +29,17 @@ body{
 .circle{
     border-radius: 50%;
 }
-.home-intro{
+.home-intro, .classes-intro{
     padding-top: 8rem; /*128*/
-    background: url("imgs/intro.jpg") no-repeat center center transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
     background-size: cover;
     z-index: 1;
     position: relative;
+}
+.classes-intro{
+    background-position: top center;
+    overflow: hidden;
 }
 .home-intro .circle-design{
     margin: 5.625em auto 4.8125em; /*90 77*/
@@ -33,10 +47,26 @@ body{
     height: 44.125em; /*706*/
     position: relative;
 }
-
+.classes-intro .circle-design{
+    margin: 0;
+    width: 36%;
+    padding-top: 36%;
+    position: absolute;
+    z-index: 1;
+    top: 2rem;
+    left: 2rem;
+}
+.class-details .circle-design{
+    margin: 0;
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+    margin-top: 4rem;
+}
+.shadow{
+    box-shadow: 0.3125em 0em 2.6875em rgba(2, 4, 0, 0.2);
+}
 .circle-design .bg-1{
-    background-color: rgba(203, 210, 210, 0.57);
-    box-shadow: rgba(2, 4, 0, 0.2) 0.3125em 0em 2.6875em; /*5 43*/
     width: 100%;
     height: 100%;
     z-index: 1;
@@ -44,8 +74,6 @@ body{
 }
 
 .circle-design .bg-2{
-    background-color: rgba(213, 220, 220, 1);
-    box-shadow: rgba(2, 4, 0, 0.2) 0.3125em 0em 2.6875em; /*5 43*/
     width: 89.66%;
     height: 89.66%;
     z-index: 2;
@@ -55,7 +83,6 @@ body{
 }
 
 .circle-design .bg-3{
-    background-color: rgba(255, 255, 255, 1);
     width: 76.06%;
     height: 76.06%;
     z-index: 3;
@@ -64,8 +91,15 @@ body{
     left: 11.97%;
 }
 
+.circle-design.offer .bg-3,
+.class-details .circle-design .bg3{
+    width: 60.00%;
+    height: 60.00%;
+    top: 20%;
+    left: 20%;
+}
+
 .circle-design .border-1{
-    background-color: transparent;
     border: solid 1px #bfb7c8;
     width: 81.86%;
     height: 81.86%;
@@ -74,9 +108,12 @@ body{
     top: 9.07%;
     left: 9.07%;
 }
+.circle-design.offer .border-1,
+.class-details .circle-design .border-1{
+    position: absolute;
+}
 
 .circle-design .border-2{
-    background-color: transparent;
     border: solid 1px #91839f;
     width: 76.48%;
     height: 76.48%;
@@ -87,7 +124,6 @@ body{
 }
 
 .circle-design .border-3{
-    background-color: transparent;
     border: solid 2px #6d5a80;
     width: 69.40%;
     height: 69.40%;
@@ -98,7 +134,6 @@ body{
 }
 
 .circle-design .content{
-    background-color: transparent;
     width: 60%;
     height: 60%;
     z-index: 7;
@@ -111,7 +146,6 @@ body{
 .pin{
     width: 1.625em;  /*26*/
     height: 1.625em;  /*26*/
-    background-color: #745a82;
     position: absolute;
 }
 .pin.top{
@@ -135,7 +169,6 @@ body{
     position: absolute;
     width: 112.5rem; /*1800*/
     height: 112.5rem; /*1800*/
-    background-color: #ebf2f2;
     bottom: 0;
     left: 50%;
     margin-left: -56.25rem; /*900*/
@@ -147,7 +180,7 @@ body{
     text-align: center;
 }
 .yoga-class{
-    width: 18.5rem; /*270*/
+    width: 18.6rem; /*270*/
 }
 .class-image{
     overflow: hidden;
@@ -158,4 +191,101 @@ body{
 }
 .class-text{
     border-bottom: solid 2px #ac9cb4;
+    overflow-wrap: break-word;
+}
+
+.square-circle-design{
+    position: relative;
+    width: 150%;
+    margin-left: -25%;
+    overflow: hidden;
+    z-index: 0;
+}
+.square-circle-design .placeholder{
+    width: 100%;
+    padding-top: 50%;
+    background: #fff;
+    position: relative;
+    z-index: 0;
+}
+.square-circle-design .circle1{
+    margin: 0 auto;
+    width: 100%;
+    padding-top: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+}
+.square-circle-design .circle2{
+    width: 92%;
+    padding-top: 100%;
+    position: absolute;
+    z-index: 2;
+    margin-left: 4%;
+    top: 2.5rem;
+}
+.square-circle-design .circle3{
+    border-radius: 50% 50% 0 0;
+    width: 86%;
+    left: 7%;
+    padding-top: 100%;
+    position: absolute;
+    z-index: 3;
+    background-position: top center;
+    background-size: 82% auto;
+    background-repeat: no-repeat;
+    top: 5rem;
+}
+
+.circle-design.offer .border-1{
+    border: solid 1px #7c618a;
+}
+.intro-text{
+    position: absolute;
+    z-index: 4;
+    top: 47%;
+    left: 12%;
+}
+.circle-design .class-image{
+    width: 100%;
+    height: 100%;
+}
+.class-details{
+    position: relative;
+    overflow: hidden;
+}
+.class-details .bg{
+    position: absolute;
+    width: 100%;
+    height: 130%;
+    top: 0;
+    z-index: 0;
+}
+.class-details.left .bg{
+    border-radius: 50% 0 0 0;
+}
+.class-details.right .bg{
+    border-radius: 0 50% 0 0;
+}
+.class-details.left{
+    direction: rtl;
+}
+.class-details.left .image,
+.class-details.left .text{
+    direction: ltr;
+}
+.class-details .text{
+    text-align: left;
+    padding-top: 8.5rem;
+    padding-left: 4.5rem;
+}
+.class-details .text .class-text{
+    width: 74%;
+}
+.class-details .text .start-date{
+    float: left;
+    margin-right: 4.5rem;
+}
+.class-details .text .price{
+    float: none;
 }
